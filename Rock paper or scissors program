@@ -1,0 +1,41 @@
+import random
+gamei=["rock","paper","scissor"]
+points=0
+pointsi=0
+gameirandom=random.choice(gamei)
+while points<5 or pointsi<5:
+    game = str(input("Rock,paper or scissor(first to 5 wins): ")).lower()
+    gameirandom = random.choice(gamei)
+    if game == "rock" and gameirandom == gamei[1]:
+        print("You lost,opponent got a point")
+        pointsi+=1
+        continue
+    elif game == "scissor" and gameirandom == gamei[0]:
+        print("You lost,opponent got a point")
+        pointsi+=1
+        continue
+    elif game == "paper" and gameirandom == gamei[2]:
+        print("You lost,opponent got a point")
+        pointsi+=1
+        continue
+    elif game == "rock" and gameirandom == gamei[2]:
+        print("You won,you got a point")
+        points+=1
+        continue
+    elif game == "paper" and gameirandom == gamei[0]:
+        print("You won,you got a point")
+        points+=1
+        continue
+    elif game == "scissor" and gameirandom == gamei[1]:
+        print("you won,you got a point")
+        pointsi+=1
+        continue
+    elif game != "scissor" or game != "rock" or game !="scissor":
+        print("only rock paper and scissors?")
+    else:
+        print("draw")
+        continue
+if points>=5:
+    print("u won, the opponent had",pointsi,"points")
+else:
+    print("you lost")
