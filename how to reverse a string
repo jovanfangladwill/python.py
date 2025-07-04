@@ -1,0 +1,4 @@
+ def reverse(s):
+     return (ent[::-1])
+ ent=str(input("something: "))
+ print(reverse(ent))
